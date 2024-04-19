@@ -25,9 +25,10 @@ body {
   color: var(--normal-black);
 }
 .container {
-  max-width: 144rem;
+  /* max-width: 144rem; */
   /* paddding: 13.5rem */
   padding: 0 8rem;
+  margin: 0 auto;
 }
 .heading-secondary {
   font-family: "Gilroy-bold", sans-serif;
@@ -38,7 +39,8 @@ body {
 }
 .heading-tertiary {
   font-family: "Gilroy-medium", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
   color: var(--light-black);
   text-align: center;
   margin-bottom: 4rem;

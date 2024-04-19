@@ -35,7 +35,7 @@
 .hero-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("../SVG/hero/hero-img.jpg");
-  background-size: contain;
+  background-size: cover;
   height: 100vh;
 }
 .hero-text h4 {
@@ -59,20 +59,22 @@
   width: fit-content;
   margin-top: 8rem;
 }
-input,
+.cta input,
+.hero-form input,
 select {
   color: #999999;
   border: none;
   background: none;
   padding-right: 2rem;
 }
-input::placeholder {
+.cta input::placeholder {
   color: #999999;
 }
 .sel-location {
   border-right: 1px solid #999999;
 }
-input {
+.cta input,
+.hero-form input {
   border-right: 1px solid #999999;
 }
 
@@ -119,13 +121,13 @@ input {
 }
 .comment {
   top: -18%;
-  left: 12%;
+  left: 4%;
 }
 .comment-1 {
-  left: 26%;
+  left: 20%;
 }
 .comment-2 {
-  left: 40%;
+  left: 36%;
 }
 /* ********************** */
 /* SECTION EXPLORE */
@@ -343,7 +345,12 @@ input {
 .react-btns {
   justify-content: space-around;
 }
-.buy-btn {
+.buy-btn-1,
+.buy-btn-2,
+.buy-btn-3,
+.buy-btn-4,
+.buy-btn-5,
+.buy-btn-6 {
   display: block;
   font-family: "Gilroy-SemiBold", sans-serif;
   background-color: #28a4a21a;
@@ -596,8 +603,8 @@ input {
   background-color: #fff;
   padding: 0.8rem;
   gap: 0.5rem;
-  top: 66%;
-  left: 13%;
+  top: 80%;
+  left: 5%;
   color: #28a3a1;
 }
 .agent-box:hover .list {
@@ -664,8 +671,25 @@ input {
 }
 .testimonial-text {
   justify-self: center;
-  width: 55%;
+  width: 70%;
   text-align: justify;
+  font-size: 1.8rem;
+}
+.test-btn {
+  border: none;
+  background-color: #28a3a1;
+  width: 17rem;
+  height: 5rem;
+}
+.test-btn:hover {
+  background-color: #28a4a21a;
+}
+.test-arr {
+  width: 3rem;
+  stroke: #fff;
+}
+.test-arr:hover {
+  stroke: #28a3a1;
 }
 .quote {
   top: 35%;
@@ -747,9 +771,41 @@ input {
   font-family: "Gilroy-Bold", sans-serif;
   font-size: 3rem;
 }
-.cta input {
+.cta input,
+.section-footer input {
   padding: 1.8rem;
   border: none;
   width: 25rem;
   background-color: #fff;
+}
+/* ******************** */
+/* SECTION FOOTER */
+/* ********************/
+.section-footer {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  gap: 2rem;
+  font-size: 1.4rem;
+  padding: 0 9rem;
+  font-family: "Gilroy-Medium", sans-serif;
+}
+.footer-text {
+  line-height: 1.4;
+}
+.footer-links {
+  padding: 0.2rem;
+  color: #28a3a1;
+  font-size: 3rem;
+}
+.quick-link,
+.quick-form {
+  cursor: pointer;
+  gap: 1.4rem;
+}
+.quick-contact {
+  cursor: pointer;
+  gap: 2rem;
+}
+.section-footer input {
+  outline: #28a3a1 1px solid;
 }

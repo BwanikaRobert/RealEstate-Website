@@ -1,0 +1,13 @@
+/* 1rem=1em=16px */
+/******************************/
+/* BELOW 1200PX (landscape tablets */
+/******************************/
+@media (max-width: 75em) {
+  .pro-type {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+  }
+}
