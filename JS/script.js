@@ -1,3 +1,23 @@
+const productBox = document.querySelectorAll(".product-box");
+let buyEl = document.querySelectorAll(".buy-btn");
+
+console.log(buyEl);
+// buyEl.textContent = "BUY";
+
+for (const item of productBox) {
+  item.addEventListener("mouseover", function () {
+    item.querySelector(".buy-btn").textContent = "BUY";
+    item.querySelector(".buy-btn").classList.add("buy");
+  });
+  item.addEventListener("mouseout", function () {
+    item.querySelector(".buy-btn").classList.remove("buy");
+    item.querySelector(".buy-btn").textContent = "750/mo";
+  });
+}
+
+
+
+
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
