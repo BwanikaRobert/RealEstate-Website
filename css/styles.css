@@ -345,12 +345,7 @@ select {
 .react-btns {
   justify-content: space-around;
 }
-.buy-btn-1,
-.buy-btn-2,
-.buy-btn-3,
-.buy-btn-4,
-.buy-btn-5,
-.buy-btn-6 {
+#buy-btn {
   display: block;
   font-family: "Gilroy-SemiBold", sans-serif;
   background-color: #28a4a21a;

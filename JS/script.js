@@ -1,22 +1,28 @@
 const productBox = document.querySelectorAll(".product-box");
-let buyEl = document.querySelectorAll(".buy-btn");
-
-console.log(buyEl);
-// buyEl.textContent = "BUY";
+let buyEl = document.querySelectorAll("#buy-btn");
+let active;
+const designBuy = [
+  ["backgroundColor", ["#28a3a1", "white"]],
+  ["fontSize", ["1.8rem", "1.6rem"]],
+  ["color", ["white", "#28a3a1"]],
+];
 
 for (const item of productBox) {
+  const buyBtn = item.querySelector("#buy-btn");
   item.addEventListener("mouseover", function () {
-    item.querySelector(".buy-btn").textContent = "BUY";
-    item.querySelector(".buy-btn").classList.add("buy");
+    item.querySelector("#buy-btn").textContent = "BUY";
+
+    for (const [properttName, propertyValue] of designBuy) {
+      buyBtn.style[properttName] = `${propertyValue[0]}`;
+    }
   });
   item.addEventListener("mouseout", function () {
-    item.querySelector(".buy-btn").classList.remove("buy");
-    item.querySelector(".buy-btn").textContent = "750/mo";
+    item.querySelector("#buy-btn").textContent = "750/mo";
+    for (const [properttName, propertyValue] of designBuy) {
+      buyBtn.style[properttName] = `${propertyValue[1]}`;
+    }
   });
 }
-
-
-
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
