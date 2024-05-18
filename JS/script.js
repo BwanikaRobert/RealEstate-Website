@@ -1,8 +1,9 @@
+"use strict";
 const productBox = document.querySelectorAll(".product-box");
 let buyEl = document.querySelectorAll("#buy-btn");
 let active;
 const designBuy = [
-  ["backgroundColor", ["#28a3a1", "white"]],
+  ["backgroundColor", ["#28a3a1", "#28a3a11a"]],
   ["fontSize", ["1.8rem", "1.6rem"]],
   ["color", ["white", "#28a3a1"]],
 ];
@@ -22,6 +23,38 @@ for (const item of productBox) {
       buyBtn.style[properttName] = `${propertyValue[1]}`;
     }
   });
+}
+
+//////////////////////////////////////////////////////////////
+// Removing breaking points when the screen size reduces
+const tertiaryheadEl = document.querySelectorAll(".heading-tertiary");
+let arrStringsAdded = "";
+const combineStrings = function (name) {
+  for (const item of name) {
+    let str = item.trim();
+    arrStringsAdded += str;
+  }
+  return arrStringsAdded;
+};
+if (window.matchMedia("(max-width: 1216px)").matches) {
+  for (const text of tertiaryheadEl) {
+    let textTransformed = text.textContent.trim().split("\n");
+    text.textContent = combineStrings(textTransformed);
+    arrStringsAdded = "";
+  }
+}
+if (window.matchMedia("(max-width:512px)").matches) {
+  const strBefore = combineStrings(
+    document.querySelector(".cta p").textContent.split("\n")
+  );
+  arrStringsAdded = "";
+  document.querySelector(".cta p").textContent = strBefore.replace(
+    "Get",
+    "Get "
+  );
+  console.log(
+    combineStrings(document.querySelector(".cta p").textContent.split("\n"))
+  );
 }
 
 ///////////////////////////////////////////////////////////

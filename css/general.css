@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: all 200ms ease-out;
+  transition: all 600ms ease-out;
 }
 * :focus {
   outline: #28a3a1 1px solid;
@@ -25,7 +25,7 @@ body {
   color: var(--normal-black);
 }
 .container {
-  /* max-width: 144rem; */
+  max-width: 144rem;
   /* paddding: 13.5rem */
   padding: 0 8rem;
   margin: 0 auto;
